@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+    <span>① 정답의 첫번째 자리는 0이 될 수 없습니다.(질문은 가능)</span>
+    <span>② 4자리 숫자를 입력해야 하며, 4스트라이크 시 정답입니다.</span>
+    <span>③ 스트라이크,볼이 모두 없을 경우 OUT이 출력됩니다.</span>
+	<div>
+		<input type="button" value="다시시작" onclick="randBtn()"/>
+		<input type="button" value="정답확인" onclick="checkAnswer()"/>
+		<input type="button" value="입력" onclick="baseball()"/>
+	</div>
+	<input type="number" id="ask" oninput='handleOnInput(this, 4)' onkeyup="if(window.event.keyCode==13){baseball()}"/>
+	<div id="guide">
+		번호가 생성되었습니다.
+	</div>
+	<table id="inning">
+	<th id="game">
+		횟수
+	</th>
+	<th id="askNumber">
+		질문 숫자
+	</th>
+	<th id="result">
+		결과
+	</th>
+	</table>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
