@@ -25,10 +25,14 @@ function randBtn() {
 
   //정답을 랜덤으로 생성
   answer = [];
+
+  var num_arr=[0,1,2,3,4,5,6,7,8,9];
+
   while (answer.length < 4) {
     let number = parseInt(Math.random() * 10);
-    if (answer.indexOf(number) < 0) {
-      answer.push(number);
+    if (answer.indexOf(num_arr[number]) < 0) {
+      answer.push(num_arr[number]);
+      num_arr.splice(number,0);
     }
   }
 
